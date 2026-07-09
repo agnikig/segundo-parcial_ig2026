@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería y Gestión - Laurie Anderson | Segundo Parcial IG</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <div id="contenedor-principal">
+
+        <header>
+            <h1>Laurie Anderson</h1>
+            <p>Performance, tecnología y narración en el arte contemporáneo</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="trayectoria.html">Trayectoria y Curiosidades</a></li>
+                <li><a href="gestion.html">Gestión de Repositorio</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            
+            <!--<section id="seccion-galeria">
+                <h2>Galería de Obras</h2>
+                <p class="instruccion-interaccion">Explorá algunas de las producciones más destacadas de la artista. Podés usar el botón para alternar el diseño visual de las tarjetas.</p>
+                
+                <button id="boton-diseno">Cambiar diseño visual</button>
+
+                <div id="mosaico-obras"></div>
+            </section>-->
+
+            <section id="seccion-gestion">
+                <h2>Gestión del Repositorio de Grabaciones</h2>
+                
+                <article class="instrucciones-ejercicio">
+                    <h3>Indicaciones para interactuar:</h3>
+                    <ol>
+                        <li>Ingresá los valores generales de transferencia y costo mensual.</li>
+                        <li>Definí la cantidad total de obras que vas a cargar y presioná "Fijar cantidad".</li>
+                        <li>Cargá los datos individuales de cada obra uno por uno. El sistema bloqueará el ingreso al llegar al límite establecido.</li>
+                        <li>Una vez finalizada la carga completa, se habilitará el botón para calcular los reportes analíticos.</li>
+                    </ol>
+                </article>
+
+                <form id="formulario-configuracion">
+                    <fieldset>
+                        <legend>Configuración Inicial del Repositorio</legend>
+                        
+                        <label for="tiempo-transferencia">Tiempo estimado de transferencia (ms por MB):</label>
+                        <input type="number" id="tiempo-transferencia" min="1" required>
+
+                        <label for="costo-almacenamiento">Costo mensual de almacenamiento (por MB en $):</label>
+                        <input type="number" id="costo-almacenamiento" min="0" step="0.01" required>
+
+                        <label for="cantidad-obras">Cantidad de obras a almacenar en total:</label>
+                        <input type="number" id="cantidad-obras" min="1" required>
+
+                        <button type="button" id="boton-fijar-cantidad">Fijar cantidad de obras</button>
+                    </fieldset>
+                </form>
+
+                <form id="formulario-obras" class="formulario-bloqueado">
+                    <fieldset id="campos-obras" disabled>
+                        <legend>Carga Individual de Obras (<span id="contador-carga">0</span> / <span id="total-carga">0</span>)</legend>
+                        
+                        <label for="nombre-obra">Nombre de la obra musical:</label>
+                        <input type="text" id="nombre-obra" required>
+
+                        <label for="duracion-obra">Duración (en minutos):</label>
+                        <input type="number" id="duracion-obra" min="1" required>
+
+                        <label for="peso-obra">Peso del archivo (en MB):</label>
+                        <input type="number" id="peso-obra" min="1" required>
+
+                        <button type="button" id="boton-cargar-obra">Cargar Obra</button>
+                    </fieldset>
+                </form>
+
+                <div id="panel-acciones">
+                    <button type="button" id="boton-calcular" disabled>Calcular Resultados</button>
+                    <button type="button" id="boton-reiniciar" disabled>Reiniciar Sistema</button>
+                </div>
+
+                <div id="bloque-resultados"></div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Agustín Nicolás Iglesias | Segundo Parcial - Informática General</p>
+            <p>Artes Multimediales - UNA</p>
+        </footer>
+
+    </div>
+
+    <!--<script src="js/galeria.js"></script>-->
+    <!--<script src="js/repositorio.js"></script>-->
+</body>
+</html>

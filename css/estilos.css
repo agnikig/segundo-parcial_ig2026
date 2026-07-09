@@ -1,0 +1,249 @@
+/* ==========================================================================
+   1. RESET GLOBAL Y MODELO DE CAJA
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. BODY Y FONDO DE PÁGINA
+   ========================================================================== */
+body {
+    /* Imagen de fondo */
+    background-image: url('../img/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* Tipografía estándar para el cuerpo del texto (NO es de Google Fonts) */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    
+    /* FLEXBOX: Se usa en el body para centrar el bloque contenedor horizontalmente */
+    display: flex;
+    justify-content: center;
+    
+    /* Márgenes (padding interno del body) para permitir visualizar la imagen de fondo */
+    padding: 3rem 0; 
+}
+
+/* ==========================================================================
+   3. BLOQUE CONTENEDOR PRINCIPAL
+   ========================================================================== */
+#contenedor-principal {
+    /* Único uso permitido de px para el ancho máximo según consigna */
+    max-width: 1100px;
+    width: 90%; /* Porcentaje para adaptabilidad */
+    
+    /* Fondo con opacidad para garantizar la legibilidad del contenido sobre la imagen */
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+/* ==========================================================================
+   4. TIPOGRAFÍAS DE GOOGLE FONTS (Solo Títulos y Destacados)
+   ========================================================================== */
+h1, h2, h3, legend, strong {
+    font-family: 'Arvo', serif;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #111111;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-family: 'Lato', sans-serif; /* Lato como secundaria para texto destacado */
+    font-size: 1.2rem;
+    color: #555555;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.2rem solid #dddddd;
+    padding-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   5. MENÚ DE NAVEGACIÓN (Horizontal con Flexbox)
+   ========================================================================== */
+nav {
+    margin-bottom: 3rem;
+    background-color: #222222;
+    border-radius: 0.3rem;
+}
+
+nav ul {
+    /* Layout Flexbox horizontal para el menú */
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+/* Comportamiento base de los enlaces */
+nav a {
+    display: block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+/* Definición estricta de todos los estados del link */
+nav a:link {
+    color: #ffffff;
+}
+
+nav a:visited {
+    color: #cccccc;
+}
+
+nav a:hover {
+    background-color: #555555;
+    color: #ffffff;
+}
+
+nav a:active {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   6. IMÁGENES
+   ========================================================================== */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   7. LAYOUTS (Resueltos exclusivamente con Flexbox y %)
+   ========================================================================== */
+
+/* Layout Página 1: 3 Columnas Iguales */
+.layout-3-columnas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.layout-3-columnas .columna {
+    width: 31%; /* Porcentaje que asegura 3 columnas del mismo ancho equitativas */
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 0.3rem;
+}
+
+/* Layout Página 2: 2 Columnas Asimétricas */
+.layout-2-columnas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.columna-principal {
+    width: 65%; /* Columna ancha */
+}
+
+.columna-lateral {
+    width: 31%; /* Columna angosta */
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 0.3rem;
+    border: 0.1rem solid #dddddd;
+}
+
+.columna-lateral p {
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   8. FORMULARIOS Y BOTONES (Para gestion.html)
+   ========================================================================== */
+form {
+    margin-bottom: 2rem;
+}
+
+fieldset {
+    padding: 1.5rem;
+    border: 0.1rem solid #cccccc;
+    border-radius: 0.3rem;
+    /* Flexbox en columna para organizar los inputs prolijamente */
+    display: flex;
+    flex-direction: column; 
+}
+
+legend {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+}
+
+label {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+input {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 0.1rem solid #aaaaaa;
+    border-radius: 0.2rem;
+}
+
+button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #222222;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+button:hover {
+    background-color: #555555;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.formulario-bloqueado {
+    opacity: 0.5;
+}
+
+/* ==========================================================================
+   9. PIE DE PÁGINA
+   ========================================================================== */
+footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 0.1rem solid #dddddd;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #777777;
+}
