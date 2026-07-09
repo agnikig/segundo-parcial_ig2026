@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GESTIÓN DE REPOSITORIO 
+   GESTIÓN DE REPOSITORIO (gestion.html)
    ========================================================================== */
 
 // 1. Declaración de variables globales del sistema

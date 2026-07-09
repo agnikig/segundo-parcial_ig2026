@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LÓGICA PARA LA GALERÍA DINÁMICA DE OBRAS (gestion.html)
+   LÓGICA PARA LA GALERÍA DINÁMICA DE OBRAS (trayectoria.html)
    ========================================================================== */
 
 // 1. Declaración del Array de Objetos con 5 obras del artista
