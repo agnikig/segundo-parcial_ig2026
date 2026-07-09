@@ -60,6 +60,10 @@ mosaicoObras.innerHTML = estructuraGaleria;
 // FUNCIONALIDAD EXTRA: CAMBIO DE DISEÑO VISUAL
 // ==========================================================================
 botonDiseno.addEventListener('click', function() {
-    // Al hacer clic, alternamos la clase 'diseno-alternativo' en el contenedor padre
-    mosaicoObras.classList.toggle('diseno-alternativo');
+    // Si contiene la clase, la elimina; si no, la agrega.
+    if (mosaicoObras.classList.contains('diseno-alternativo')) {
+        mosaicoObras.classList.remove('diseno-alternativo');
+    } else {
+        mosaicoObras.classList.add('diseno-alternativo');
+    }
 });
